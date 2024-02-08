@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+        <form method="post">{% csrf_token %}
+            <label>Nom:</label>
+            <input type="text" name="nom" value="{{kurslar.nom}}"><br><br>
+
+            <label>Daraja:</label>
+            <input type="text" name="daraja" value="{{kurslar.daraja}}"><br><br>
+
+            <label>Narx:</label>
+            <input type="number" name="narx" value="{{kurslar.narx}}"><br><br>
+
+            <label>Chegirma:</label>
+            <input type="number" name="chegirma" value="{{kurslar.chegirma}}"><br><br>
+
+            <button>Tahrirlashni amalga oshirish</button>
+        </form>
+<br>
+
+</body>
+</html>

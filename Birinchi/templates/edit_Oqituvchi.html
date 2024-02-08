@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" >{% csrf_token %}
+        <label>Ism: </label>
+        <input type="text" name="ism" value="{{nazoratchi.ism}}"> <br> <br>
+
+        <label>Kurs: </label>
+        <input type="text" name="kasb" value="{{nazoratchi.kasb}}"> <br><br>
+
+
+        <button type="submit">Tahrirlashni amalga oshirish</button>
+    </form>
+
+
+</body>
+</html>

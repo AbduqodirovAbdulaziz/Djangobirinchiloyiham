@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <label>Nomi:</label>
+    <input type="text" name="nomi" value="{{fanlar.nomi}}"> <br><br>
+
+     <label>O'qituvchi:</label>
+        <select name="oqituvchi">
+        {% for ustoz in ustozlar %}
+        <option value="{{ustoz.id}}">{{ ustoz.ism}} {{ustoz.familiya}}</option>
+        {% endfor %}
+    </select><br><br>
+
+     <label>Credit:</label>
+    <input type="number" name="credit" value="{{fanlar.credit}}"> <br><br>
+
+    <button type="submit">Tahrirlashni amalga oshirish</button>
+
+</form>
+
+</body>
+</html>

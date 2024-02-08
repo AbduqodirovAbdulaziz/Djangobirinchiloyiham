@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hamma ustozlar ro'yhati</h1>
+<br>
+<br>
+        {% for ustoz in ustozlar %}
+            <h1>Ism:{{ ustoz.ism }}
+                Familiya:{{ustoz.familiya}}</h1>
+            <h1>Jinsi:{{ ustoz.jinsi }}
+                Yoshi:{{ ustoz.yosh }}</h1>
+        {% endfor %}
+<hr>
+<br>
+<br>
+<h1>Ma'lumot qo'shish </h1>
+<hr>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Qo'shish</button>
+        </form>
+<br>
+
+</body>
+</html>
